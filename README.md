@@ -47,7 +47,7 @@ winston.add(winston.transports.File, {
 });
 ```
 
-__note__: This is important since winston does not provide options for setting the encoding, mode or flag of the file.
+__note__: This is important since winston does not provide options for setting the encoding, mode or flag of the file and file rotation does not work with streams.
 
 
 ## API
