@@ -17,18 +17,25 @@ npm install stream-rotate
 
 var rotator = require('stream-rotate');
 
-log = rotator({
+logstream = rotator({
     path: '/logs'
   , name: 'myapp'
   , size: '1m'
   , retention: 2
   });
   
-log = new rotator({...});
+logstream = new rotator({...});
 
-log.on('error', function(err){
+logstream.on('error', function(err){
   // handle errors here
 });  
+```
+
+### Express
+
+```
+
+app.use(express.logger({stream: logstream, format: "default"}));
 ```
 
 ## API
@@ -61,4 +68,10 @@ When a current log file is no longer valid (too big or old) then it is moved. Th
   - `k`: converts to kilobytes
   - `m`: converts to megabytes
   - `g`: coverts to gigabytes
-  
+
+
+## TODO
+
+  - implement readable stream interface
+  - robust options on log naming/archiving
+  - implement compression
