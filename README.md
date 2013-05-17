@@ -38,6 +38,18 @@ logstream.on('error', function(err){
 app.use(express.logger({stream: logstream, format: "default"}));
 ```
 
+### Winston
+
+```js
+
+winston.add(winston.transports.File, {
+  stream: logstream
+});
+```
+
+__note__: This is important since winston does not provide options for setting the encoding, mode or flag of the file.
+
+
 ## API
 
 ### Stream-Rotate
