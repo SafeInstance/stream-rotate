@@ -93,10 +93,13 @@ When a current log file is no longer valid (too big or old) then it is moved. Th
 ##### freq
   Accepts a {Number} or {String}. If string, it must start with a number ahnd have one of the following characters appended:
   
+  - `s`: sets unit to second(s)
+  - `m`: sets unit to minutes(s)
   - `h`: sets unit to hour(s)
   - `d`: sets unit to day(s)
   - `w`: sets unit to week(s)
-  - `m`: sets unit to month(s)
+  - `M`: sets unit to month(s)
+  - `y`: sets unit to year(s)
 
 __note__: if {Number} expected unit is in seconds.
 
