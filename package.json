@@ -1,20 +1,17 @@
 {
     "name" : "stream-rotate",
     "description" : "write stream rotator",
-    "version" : "0.0.1",
+    "homepage": "http://github.com/safeinstance/stream-rotate",
+    "version" : "0.0.2",
     "author" : "Nathan White <nw@nwhite.net> (http://nw.is)",
     "main" : "./index",
-    "keywords" : [
-        "stream",
-        "log",
-        "rotate"
-    ],
+    "keywords" : [ "stream", "log", "rotate" ],
     "repository" : {
         "type" : "git",
         "url" : "http://github.com/safeinstance/stream-rotate.git"
     },
-    "scripts" : {
-        "test" : "mocha test/*.js"
+    "bugs": {
+      "url": "http://github.com/safeinstance/stream-rotate/issues/"
     },
     "dependencies": {
       "mkdirp": "0.3.5",
@@ -23,5 +20,12 @@
     "devDependencies" : {
         "mocha": "1.9.0",
         "should": "1.2.2"
+    },
+    "license": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }],
+    "scripts" : {
+        "test" : "mocha test/*.js"
     }
 }
