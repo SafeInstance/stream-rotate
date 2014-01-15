@@ -29,6 +29,12 @@ logstream = new rotator({...});
 logstream.on('error', function(err){
   // handle errors here
 });  
+
+logstream.on('rotated',function () {
+        console.log('The log file was just rotated');
+    });
+
+
 ```
 
 ### Express
